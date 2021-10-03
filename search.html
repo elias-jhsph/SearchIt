@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./search.css">
+  <script src="./renderer.js"></script>
+</head>
+
+<body>
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mx-auto col-md-12">
+          <h1>Search It</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-0" style=""><a class="btn btn-primary" onclick="back()">Back</a></div>
+          <pre>   </pre>
+          <p id="data_dump">Search Complete</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="full_form" class="">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Header1</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h1" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="f1" class="col-2 col-form-label">Footer1</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f1" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="h2" class="col-2 col-form-label">Header2</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h2" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Footer2</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f2" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Header3</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h3" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Footer3</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f3" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Header4</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h4" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Footer4</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f4" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Header5</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h5" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Footer5</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f5" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Header6</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="h6" placeholder="This will preceed each item in the list" style=""> </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Footer6</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="f6" placeholder="This will follow each item in the list" style=""> </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label" style="">Alternate Search Url</label>
+              <div class="col-10">
+                <input type="text" class="form-control" id="alternate" placeholder="This is the alternate search link" style=""> </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="btn-group">
+            <a input type="radio" id="r1" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 1</a>
+            <a input type="radio" id="r2" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 2</a>
+            <a input type="radio" id="r3" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 3</a>
+            <a input type="radio" id="r4" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 4</a>
+            <a input type="radio" id="r5" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 5</a>
+            <a input type="radio" id="r6" class="btn btn-outline-primary" value="false" onclick="alternate(this);">Search 6</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-0" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-12">
+              <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label" style="">Search Start</label>
+                <div class="col-10">
+                  <input type="text" class="form-control" id="s1" value="1" style=""> </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label" style="">Search End</label>
+                  <div class="col-10">
+                    <input type="text" class="form-control" id="e1" value="2" style=""> </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="nextI" class="col-md-12" style=""><a class="btn btn-primary btn-lg btn-block" onClick="nextInterval()">Next Interval</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-0">
+    <div class="container">
+      <div class="row">
+        <div class="py-0 align-items-center justify-content-center d-flex flex-grow-1 col-lg-12">
+          <button id="id1" type="submit" class="btn btn-primary" onclick="search(this,full_form)"> Activate Search </button>
+          <button id="stop"type="submit" class="btn btn-outline-primary" value="Reload Page" onClick="stopPython()"> Quick! Stop Search! </button>
+      </div>
+    </div>
+  </div>
+  <div class="py-5"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+ "name": "SearchIt",
+ "version": "0.1.1",
+ "description": "An auto search app",
+ "author": "ewf",
+ "devDependencies": {
+  "electron-builder": "^22.11.7",
+  "electron-packager": "latest"
+ },
+ "build": {
+  "extraResources": "./scripts"
+ },
+ "main": "main.js",
+ "scripts": {
+  "start": "electron .",
+  "dist": "electron-builder"
+ },
+ "dependencies": {
+  "@electron/remote": "^2.0.1"
+ }
+}

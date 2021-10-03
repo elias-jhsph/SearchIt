@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./renderer.js"></script>
+
+</head>
+
+<body class="bg-dark">
+  <div class="py-5 text-center" style="background-image: url(&quot;images/doors-1767559_960_720.jpg&quot;); background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="bg-white p-5 mx-auto col-md-8 col-10">
+          <h3 class="display-3">Search It...</h3>
+          <p class="mb-3 lead">The only way to look up a lot of S%#T</p>
+          <p class="mb-4">To use 'Search It' you must open a .txt file that contains a list of elements to search</p>
+          <button class="btn btn-primary" id="btn-readfile" readonly onclick="openFile()">Select .txt File</button>
+          <button class="btn btn-secondary" id="btn-searchfile" onclick="redirect()" disabled="True">Continue to Search</button>
+          <p id="file-name">No File Selected.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

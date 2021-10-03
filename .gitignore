@@ -1,0 +1,9 @@
+.DS_Store
+.Rhistory
+.html
+.idea
+NUL
+__pycache__/
+*DS_Store
+dist/
+node_modules/

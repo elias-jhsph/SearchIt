@@ -1,0 +1,57 @@
+{
+  "name": "SearchIt",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Automate Your Searches",
+  "author": "Elias",
+  "main": "./app/main.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "searchit",
+    "category": "utility",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "./src/scripts/",
+        "to": "scripts",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@electron/remote": "^2.0.1",
+    "electron": "^15.1.0",
+    "electron-builder": "^22.11.7"
+  }
+}
